@@ -10,7 +10,7 @@ The same tests can be used to determine whether in various scenarios the User Ag
 * [data-uri-image-data-uri-description.html](data-uri-image-data-uri-description.html)
 * [data-uri-image-external-description.html](data-uri-image-external-description.html)
 * [data-uri-image-internal-description.html](data-uri-image-internal-description.html)
-* (empty-image-data-uri-description.html](empty-image-data-uri-description.html)
+* [empty-image-data-uri-description.html](empty-image-data-uri-description.html)
 * [empty-image-external-description.html](empty-image-external-description.html)
 * [empty-image-internal-description.html](empty-image-internal-description.html)
 * [external-image-data-uri-description-girt-by-spaces.html](external-image-data-uri-description-girt-by-spaces.html)
