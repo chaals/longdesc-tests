@@ -7,8 +7,8 @@ There are 11 tests for descriptions, under different combinations of circumstanc
 
 The same tests can be used to determine whether in various scenarios the User Agent enables the user to access the description, and whether the description can be found through system accessibility APIs.
 
-*((data-uri-image-data-uri-description.html))
-*((data-uri-image-external-description.html))
+  *[[data-uri-image-data-uri-description.html]]
+  *[[data-uri-image-external-description.html]]
 *((data-uri-image-internal-description.html))
 *((empty-image-data-uri-description.html))
 *((empty-image-external-description.html))
