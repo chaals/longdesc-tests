@@ -7,29 +7,59 @@ There are 11 tests for descriptions, under different combinations of circumstanc
 
 The same tests can be used to determine whether in various scenarios the User Agent enables the user to access the description, and whether the description can be found through system accessibility APIs.
 
-* [data-uri-image-data-uri-description.html](data-uri-image-data-uri-description.html)
-* [data-uri-image-external-description.html](data-uri-image-external-description.html)
-* [data-uri-image-internal-description.html](data-uri-image-internal-description.html)
-* [empty-image-data-uri-description.html](empty-image-data-uri-description.html)
-* [empty-image-external-description.html](empty-image-external-description.html)
-* [empty-image-internal-description.html](empty-image-internal-description.html)
-* [external-image-data-uri-description-girt-by-spaces.html](external-image-data-uri-description-girt-by-spaces.html)
-* [external-image-external-description-girt-by-spaces.html](external-image-external-description-girt-by-spaces.html)
-* [external-image-internal-description-girt-by-spaces.html](external-image-internal-description-girt-by-spaces.html)
-* [external-image-data-uri-description.html](external-image-data-uri-description.html)
-* [external-image-external-description.html](external-image-external-description.html)
-* [external-image-internal-description.html](external-image-internal-description.html)
-* [external-image-with-relative-base-external-description.html](external-image-with-relative-base-external-description.html)
-* [external-image-with-absolute-base-external-description.html](external-image-with-absolute-base-external-description.html) will only work if the base href is changed to match the location from which it is run…
-* [reflected-changing-longdesc.html](reflected-changing-longdesc.html) tests that the javascript attribute really reflects the HTML attribute
+Links to the test files along with a description of expected results can be found below:
 
-All the tests previously mentioned can used to determine if the presence of a longdesc is discoverable under various conditions.
+## Longdesc value as data:URI
 
-[iframe-discoverability.html](iframe-discoverability.html) includes an image with a description in a separate document that is loaded within an iframe, to test whether tools provide discoverability in that situation (at least some are known to fail that test).
+In order for the following tests to pass, the tester must be able to access the image description (longdesc). Success is the display of the "Longdesc test Pass page" (page title) which simply consists the word "Pass" contained in a heading level 1.
 
-[invalid-longdescription.html](invalid-longdescription.html) can be used to test validation tools, but handling of invalid longdescs by user agents is currently undefined.
+* [data:URI image with data:URI description](data-uri-image-data-uri-description.html)
+* [Empty image with data:URI description](empty-image-data-uri-description.html)
+* [External image with data:URI description (with extra spaces)](external-image-data-uri-description-girt-by-spaces.html)
+* [External image with data:URI description](external-image-data-uri-description.html)
 
-There are some files required to make one or more tests work:
+## Longdesc value as external URI
+
+In order for the following tests to pass, the tester must be able to access the "Longdesc test Pass Page" which consists of the word "Pass" in a heading level 1 followed by a long description of the image.
+
+* [data:URI with External description](data-uri-image-external-description.html)
+* [Empty image with an External description](empty-image-external-description.html)
+* [External image with External description (with extra spaces)](external-image-external-description-girt-by-spaces.html)
+* [External image with External description](external-image-external-description.html)
+
+## Longdesc value as internal URI (same page link)
+
+In order for the following tests to pass, the tester must verify that the focus has moved to text that reads "Pass, if the focus is here"
+
+* [data:URI with Internal description.html](data-uri-image-internal-description.html)
+* [Empty image with an Internal description.html](empty-image-internal-description.html)
+* [External image with an Internal description (with extra spaces)](external-image-internal-description-girt-by-spaces.html)
+* [External image with an Internal description](external-image-internal-description.html)
+
+## Longdesc value as external URI in presence of `<base>` element
+
+In order for the following tests to pass, the tester must be able to access the "Longdesc test Pass Page" which consists of the word "Pass" in a heading level 1 followed by a long description of the image. *NOTE: the URI of the pass page will actually be fail.html, but the page indicates a pass - this is used to demonstrate that URIs are quite often opaque or misleading strings and should not be presented directly to the user*
+
+* [External image with External Description (relative base element set)](external-image-with-relative-base-external-description.html) 
+* [External image with External Description (absolute base element set)](external-image-with-absolute-base-external-description.html)
+
+## Other tests
+
+In order to tests that the HTML attribute reflects changes made by javascript, the tester must be able to access the "Longdesc test Pass Page" which consists of the word "Pass" in a heading level 1 followed by a long description of the image.  Displaying the "Longdesc test Fail Page" would indicate a failure of this test.
+
+* [Longdesc value updated by javascript](reflected-changing-longdesc.html) 
+
+The following test page loads an an image with a long description from a separate document using an `<iframe>`. In order for the following tests to pass, the tester must be able to access the "Longdesc test Pass Page" which consists of the word "Pass" in a heading level 1 followed by a long description of the image.  *NOTE: Some tools are known to not provide discoverability of descriptions of images loaded in an `<iframe>`*
+
+[Image in an `<iframe>` with External Description](iframe-discoverability.html) 
+
+The following test page contains an invalid long description (plain text) and can be used to test User Agent and validation tool handling. *NOTE: Handling of invalid longdescs by user agents is currently undefined.*
+
+[Invalid long description (plain text)](invalid-longdescription.html) 
+
+## Supporting files
+
+Below is a list of files that are required to make one or more of the tests work:
 
 * [fail.html](fail.html)
 * [pass.html](pass.html)
