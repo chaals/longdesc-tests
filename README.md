@@ -51,11 +51,11 @@ In order to tests that the HTML attribute reflects changes made by javascript, t
 
 The following test page loads an an image with a long description from a separate document using an `<iframe>`. In order for the following tests to pass, the tester must be able to access the "Longdesc test Pass Page" which consists of the word "Pass" in a heading level 1 followed by a long description of the image.  *NOTE: Some tools are known to not provide discoverability of descriptions of images loaded in an `<iframe>`*
 
-[Image in an `<iframe>` with External Description](iframe-discoverability.html) 
+* [Image in an `<iframe>` with External Description](iframe-discoverability.html) 
 
 The following test page contains an invalid long description (plain text) and can be used to test User Agent and validation tool handling. *NOTE: Handling of invalid longdescs by user agents is currently undefined.*
 
-[Invalid long description (plain text)](invalid-longdescription.html) 
+* [Invalid long description (plain text)](invalid-longdescription.html) 
 
 ## Supporting files
 
