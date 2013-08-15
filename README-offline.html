@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>longdesc-tests</title>
+  </head>
+  <body>
+<h1>Longdesc tests</h1>
+    <p>Some tests proposed by Charles McCathie Nevile for the <a href="http://www.w3.org/TR/html-longdesc">HTML Image Description Extension</a> specification. All tests are ©chaals, and are made available under the terms of the <a href="http://www.w3.org/Consortium/Legal/copyright-software">W3C software license</a>.</p>
+
+<h2>Multifunction tests</h2>
+
+<p>There are tests for descriptions under different combinations of circumstances - images included "normally", as data: URIs, or missing, with the descriptions internal or external to the page, as a data: URI, or in a location only reachable by taking into account the base element</p>
+
+<p>The same tests can be used to determine whether in various scenarios the User Agent enables the user to access the description, and whether the description can be found through system accessibility APIs.</p>
+
+<h3>Longdesc value as data:URI</h3>
+
+<ul>
+  <li><a href="data-uri-image-data-uri-description.html">data:URI image with data:URI description</a></li>
+  <li><a href="empty-image-data-uri-description.html">Empty image with data:URI description</a></li>
+  <li><a href="external-image-data-uri-description-girt-by-spaces.html">External image with data:URI description (with extra spaces)</a></li>
+  <li><a href="external-image-data-uri-description.html">External image with data:URI description</a></li>
+</ul>
+<h3>Longdesc value as external URI</h3>
+
+<ul>
+  <li><a href="data-uri-image-external-description.html">data:URI with External description</a></li>
+  <li><a href="empty-image-external-description.html">Empty image with an External description</a></li>
+  <li><a href="external-image-external-description-girt-by-spaces.html">External image with External description (with extra spaces)</a></li>
+  <li><a href="external-image-external-description.html">External image with External description</a></li>
+</ul>
+<h3>Longdesc value as internal URI (same page link)</h3>
+
+<ul>
+  <li><a href="data-uri-image-internal-description.html">data:URI with Internal description.html</a>
+  <li><a href="empty-image-internal-description.html">Empty image with an Internal description.html</a>
+  <li><a href="external-image-internal-description-girt-by-spaces.html">External image with an Internal description (with extra spaces</a>
+  <li><a href="external-image-internal-description.html">External image with an Internal description</a>
+</ul>
+<h3>Longdesc value as external URI in presence of a <code>base</code> element</h3>
+
+<ul>
+  <li><a href="external-image-with-relative-base-external-description.html">External image with External Description (relative base element set)</a> 
+  <li><a href="external-image-with-absolute-base-external-description.html">External image with External Description (absolute base element set)</a>
+</ul>
+
+<h3>longdesc inside an iframe</h3>
+<p>The test <a href="iframe-discoverability.html">Image in an iframe with External Description</a> loads an an image with a long description from a separate document using an <code>iframe</code>. To pass, the tester must be able to access the "Longdesc test Pass Page" which consists of the word "Pass" in a heading level 1 followed by a long description of the image.</p>
+
+
+<h2>Other tests</h2>
+
+<p><a href="reflected-changing-longdesc.html">Longdesc value updated by javascript</a> tests whether the HTML attribute reflects changes made by javascript. To pass, the tester must be redirected to <a href="pass.html">pass.html</a> which has the word "Pass" as a heading followed by a description of the image.  Displaying the "Longdesc test Fail Page" would indicate a failure of this test.</p>
+
+
+<p>The test <a href="invalid-longdescription.html">Invalid long description (plain text)</a> contains an invalid long description and can be used to test User Agent and validation tool handling. <strong>Note</strong> Handling of invalid longdescs by user agents is currently undefined.</p>
+<h2>Supporting files</h2>
+
+<p>The following files are used to make one or more of the tests work:</p>
+<ul>
+  <li><a href="fail.html">fail.html</a></li>
+  <li><a href="pass.html">pass.html</a></li>
+  <li><a href="picture.png"> picture.png </a></li>
+  <li><a href="rebased/picture2.png">rebased/picture2.png</a></li>
+  <li><a href="rebased/fail.html">rebased/fail.html</a> (despite the name, this is a pass page used to test what happens when a <code>base</code> element is used)</li>
+</ul>
+
+</body></html>
+
+
+
