@@ -11,7 +11,7 @@ Links to the test files along with a description of expected results can be foun
 
 ## Longdesc value as data:URI
 
-In order for the following tests to pass, the tester must be able to access the image description (longdesc). Success is the display of the "Longdesc test Pass page" (page title) which simply consists the word "Pass" contained in a heading level 1.
+In order for the following tests to pass, the tester must be able to access the image description (longdesc). Success is the display of the "Longdesc test Pass page"  which simply consists of the word "Pass" contained in a heading level 1.
 
 * [data:URI image with data:URI description](https://rawgithub.com/chaals/longdesc-tests/master/data-uri-image-data-uri-description.html)
 * [Empty image with data:URI description](https://rawgithub.com/chaals/longdesc-tests/master/empty-image-data-uri-description.html)
