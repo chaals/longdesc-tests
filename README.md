@@ -33,6 +33,13 @@ The same tests are used to provide 3 results:
 * [External image with an Internal description (with extra spaces)](https://rawgithub.com/chaals/longdesc-tests/master/external-image-internal-description-girt-by-spaces.html)
 * [External image with an Internal description](https://rawgithub.com/chaals/longdesc-tests/master/external-image-internal-description.html)
 
+### Longdesc value as a fragment in an external resource
+
+* [data:URI with External description fragment](https://rawgithub.com/chaals/longdesc-tests/master/data-uri-image-external-description-fragment.html)
+* [Empty image with an External description fragment](https://rawgithub.com/chaals/longdesc-tests/master/empty-image-external-description-fragment.html)
+* [External image with External description fragment (with extra spaces around the URL)](https://rawgithub.com/chaals/longdesc-tests/master/external-image-external-description-fragment-girt-by-spaces.html)
+* [External image with External description fragment](https://rawgithub.com/chaals/longdesc-tests/master/external-image-external-description-fragment.html)
+
 ### Longdesc value as external URI in presence of `<base>` element
 
 * [External image with External Description (relative base element set)](https://rawgithub.com/chaals/longdesc-tests/master/external-image-with-relative-base-external-description.html) 
@@ -48,13 +55,18 @@ The same tests are used to provide 3 results:
 
 [Invalid long description (plain text)](https://rawgithub.com/chaals/longdesc-tests/master/invalid-longdescription.html) contains an invalid long description (plain text) and can be used to test User Agent and validation tool handling. *NOTE: Handling of invalid longdescs by user agents is currently undefined.*
 [Invalid long description (empty attribute)](https://rawgithub.com/chaals/longdesc-tests/master/empty-longdesc.html) contains an invalid long description (plain text) and can be used to test User Agent and validation tool handling. *NOTE: Handling of invalid longdescs by user agents is currently undefined.*
+[Pointer to an invalid long description (not contained in a well-formed fragment)](https://rawgithub.com/chaals/longdesc-tests/master/fail-fragment-pointer.html) points to a long description in a [page fragment whose target is an empty element](https://rawgithub.com/chaals/longdesc-tests/master/fail-fragment-pointer.html). Validation tools should at least generate a warning, since an empty element is almost certainly not an adequate description, and is likely instead to reflect not passing the relevant authoring requirement.
 
 ## Supporting files
 
 The following files are required to make one or more of the tests work:
 
+* [README.md](https://rawgithub.com/chaals/longdesc-tests/master/README.md) - this documentation
+* [README-offline.html](https://rawgithub.com/chaals/longdesc-tests/master/README-offline.html) - an HTML version of this content to allow the contents of the repository to be posted somewhere as a self-contained bundle.
 * [fail.html](https://rawgithub.com/chaals/longdesc-tests/master/fail.html)
 * [pass.html](https://rawgithub.com/chaals/longdesc-tests/master/pass.html)
+* [fail-fragment.html](https://rawgithub.com/chaals/longdesc-tests/master/fail-fragment.html)
+* [pass-fragment.html](https://rawgithub.com/chaals/longdesc-tests/master/pass-fragment.html)
 * [picture.png](https://rawgithub.com/chaals/longdesc-tests/master/picture.png)
 * [rebased/picture2.png](https://rawgithub.com/chaals/longdesc-tests/master/rebased/picture2.png))
 * [rebased/fail.html](https://rawgithub.com/chaals/longdesc-tests/master/rebased/fail.html) (actually a pass page, used to test what happens in the presence of a `<base>` element)
