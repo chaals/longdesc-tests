@@ -47,6 +47,7 @@ The same tests are used to provide 3 results:
 [Longdesc value updated by javascript](https://rawgithub.com/chaals/longdesc-tests/master/reflected-changing-longdesc.html) tests that the HTML attribute reflects changes made by javascript. To pass, the browser must redirect to the "Longdesc test Pass Page" which has the word "Pass" as a heading, followed by a description of the image.  Displaying the "Longdesc test Fail Page" would indicate a failure of this test. 
 
 [Invalid long description (plain text)](https://rawgithub.com/chaals/longdesc-tests/master/invalid-longdescription.html) contains an invalid long description (plain text) and can be used to test User Agent and validation tool handling. *NOTE: Handling of invalid longdescs by user agents is currently undefined.*
+[Invalid long description (empty attribute)](https://rawgithub.com/chaals/longdesc-tests/master/empty-longdesc.html) contains an invalid long description (plain text) and can be used to test User Agent and validation tool handling. *NOTE: Handling of invalid longdescs by user agents is currently undefined.*
 
 ## Supporting files
 
