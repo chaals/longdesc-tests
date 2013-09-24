@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <title>Longdesc test:  External image, internal description</title>
+  <title>Longdesc test:  External image, internal description surrounded by spaces</title>
  </head>
  <body>
+  <h1>Longdesc test:  External image, internal description surrounded by spaces</h1>
+  <p>The <code>longdesc</code> attribute for the image on this page references an internal URI (same page link) surrounded by spaces.  In order for the following tests to pass, the tester must verify that the focus has moved to text that reads "Pass, if the focus is here" when they access the image description (longdesc).<p>
   <img src="picture.png" alt="the image" longdesc="  #pass  ">
 <div style="height:50em"></div>
 <p id="pass">Pass, if the focus is here</p>
