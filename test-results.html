@@ -6,19 +6,24 @@
     <title>longdesc test-results</title>
     <style>
 table
-{
-border-collapse:collapse;
-}
-table,th, td
-{
-border: 1px solid black;
-}
-td.PASS{ background-color: #61ce32; }
-td.fail { background-color: #f1b1ac; }
+{ border-collapse:collapse; }
+table,th, td { border: 1px solid black; }
+td.pass { background-color: #6c3; }
+td.fail { background-color: #fbb; }
 .pass, .fail { font-weight: bold; }
+nav ul, nav li { display: inline; }
 </style> </head>
   <body>
-    <h1>longdesc test-results</h1>
+    <h1>longdesc test results</h1>
+
+<nav>Results: <ul>
+<li><a href="#muft">Multi-function browser tests</a></li>
+<li><a href="#muft">Automatic browser tests</a></li>
+<li><a href="#muft">Validator tests</a></li>
+</ul></nav>
+
+<h2 id="muft">Multi-function tests</h2>
+
     <table border="1">
       <tbody>
         <tr>
@@ -398,8 +403,8 @@ td.fail { background-color: #f1b1ac; }
         <tr>
           <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/data-uri-image-external-description-fragment.html">data:URI
               - ext desc fragment</a></th>
-          <td></td>
-          <td></td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
           <td></td>
           <td></td>
           <td></td>
@@ -426,8 +431,8 @@ td.fail { background-color: #f1b1ac; }
         <tr>
           <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/empty-image-external-description-fragment.html">empty
               img - ext desc fragment</a></th>
-          <td></td>
-          <td></td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
           <td></td>
           <td></td>
           <td></td>
@@ -454,8 +459,8 @@ td.fail { background-color: #f1b1ac; }
         <tr>
           <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/external-image-external-description-fragment-girt-by-spaces.html">ext
               img - ext desc fragment with spaces</a></th>
-          <td></td>
-          <td></td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
           <td></td>
           <td></td>
           <td></td>
@@ -482,8 +487,8 @@ td.fail { background-color: #f1b1ac; }
         <tr>
           <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/external-image-external-description-fragment.html">ext
               img - ext desc fragment</a></th>
-          <td></td>
-          <td></td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
           <td></td>
           <td></td>
           <td></td>
@@ -591,117 +596,68 @@ td.fail { background-color: #f1b1ac; }
           <td class="fail">FAIL </td>
           <td></td>
         </tr>
+    </tbody>
+</table>
+
+  <h2 id="auto">Automated browser tests</h2>
+<table border="1">
+    <tbody>
+        <tr>
+          <th scope="col">Test</th>
+          <th>Yandex browser 1.7 +
+            "Longdesc" extension, MacOS</th>
+          <th>FF 23, JAWS 15</th>
+          <th>IE10, JAWS 15</th>
+          <th>NVDA2013.2, FF23</th>
+          <th>NVDA2013.2, IE10</th>
+        </tr>
         <tr>
           <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/reflected-changing-longdesc.html">longdesc
               updated by javascript</a></th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
           <td class="pass">PASS</td>
-          <td></td>
-          <td></td>
           <td class="pass">PASS</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
           <td class="pass">PASS</td>
-          <td></td>
-          <td></td>
           <td class="pass">PASS</td>
-          <td></td>
+          <td class="pass">PASS</td>
+        </tr>
+  </tbody>
+</table>
+
+<h2 id="validation">Validation tool tests</h2>
+<table>
+       <tbody>
+        <tr>
+          <th scope="col">Test</th>
+          <th scope="col"><a href="http://validator.w3.org">W3C validator</a></th>
+          <th scope="col"><a href="http://wave.webaim.org">Wave</a> (Webaim)</th>
+          <th scope="col"><a href="http://www.cynthiasays.com">Cynthia Says</a> (HiSoftware)</th>
         </tr>
         <tr>
           <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/invalid-longdesc.html">invalid
               longdesc (plain text)</a></th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS*</td>
         </tr>
         <tr>
           <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/empty-longdesc.html">invalid
               longdesc (empty attribute)</a></th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
           <td class="pass">PASS</td>
           <td class="pass">PASS</td>
-          <td></td>
-          <td class="pass">PASS</td>
-          <td class="pass">PASS</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td class="pass">PASS</td>
-          <td></td>
-          <td></td>
-          <td class="pass">PASS</td>
-          <td></td>
+          <td class="pass">PASS*</td>
         </tr>
         <tr>
-          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/fail-fragment-pointer.html">invalid
+           <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/fail-fragment-pointer.html">invalid
               - malformed fragment</a></th>
+          <td>Did not pass</td>
+          <td>Did not pass</td>
+          <td class="pass">PASS*</td>
+        </tr>
+        <tr>
+           <th scope="row">Comments</th>
           <td></td>
           <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td class="pass">PASS</td>
-          <td class="fail">FAIL</td>
-          <td></td>
-          <td class="pass">PASS</td>
-          <td class="fail">FAIL</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td class="pass">PASS</td>
-          <td></td>
-          <td></td>
-          <td class="pass">PASS</td>
-          <td></td>
+          <td>*The system directs you to verify manually… so it isn't the highest quality pass imaginable</td>
         </tr>
       </tbody>
     </table>
